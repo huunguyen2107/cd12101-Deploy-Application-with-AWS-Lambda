@@ -1,9 +1,11 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: nhathuu
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: uda-cloud-dev-04
 service: serverless-todo-app
 
 plugins:
   - serverless-iam-roles-per-function
-
-frameworkVersion: '3'
 
 provider:
   name: aws

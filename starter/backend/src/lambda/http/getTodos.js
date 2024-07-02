@@ -3,7 +3,6 @@ import middy from '@middy/core'
 import cors from '@middy/http-cors'
 import httpErrorHandler from '@middy/http-error-handler'
 import {getByUserId} from '../../bussinessLogic/todos.mjs'
-import {S3Client} from '@aws-sdk/client-s3'
 import {getUserId} from '../utils.mjs'
 import {createLogger} from '../../utils/logger.mjs'
 
@@ -16,7 +15,7 @@ export const handler = middy()
     credentials: true
   }))
   .handler(async (event) => {
-    logger.info(`Getting all Todos ${JSON.stringify(event, null, 2)}`)
+    logger.info(`Getting all Todos ${JSON.stringify(event)}`)
 
     const userId = getUserId(event)
 
