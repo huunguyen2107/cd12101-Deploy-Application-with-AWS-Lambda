@@ -4,7 +4,7 @@ import httpErrorHandler from '@middy/http-error-handler'
 import {createLogger} from '../../utils/logger.mjs'
 import {setAttachmentUrl} from '../../bussinessLogic/todos.mjs'
 import {getUserId} from "../utils.mjs";
-import {getFormattedUrl, getUploadUrl} from "../../fileStoreage/attachmentUtils.mjs";
+import {getFormattedUrl, getUploadUrl} from "../../fileStorage/attachmentUtils.mjs";
 
 const logger = createLogger('http')
 
